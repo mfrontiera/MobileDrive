@@ -12,7 +12,7 @@ func _ready():
 	rotation_degrees = origin_rotation_value
 func _process(delta):
 	# Update of RotationLabel
-	emit_signal("deegres",int(rotation_degrees))
+	emit_signal("deegres",int(remap(rotation_degrees,-495,315,0,180)))
 	#Return of wheel to an origin value
 	if !is_used:
 		t += delta * comebackSpeed

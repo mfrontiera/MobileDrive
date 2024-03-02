@@ -112,7 +112,6 @@ script = ExtResource("17_vinui")
 [node name="ConnectionStatus" type="Sprite2D" parent="Node"]
 position = Vector2(682, 39)
 
-[connection signal="idSignal" from="." to="Node" method="_on_main_id_signal"]
 [connection signal="ipSignal" from="." to="Node" method="_on_main_ip_signal"]
 [connection signal="ssSignal" from="." to="GasBackground/GasPedal" method="_on_main_ss_signal"]
 [connection signal="wsSignal" from="." to="WheelTexture" method="_on_main_ws_signal"]
