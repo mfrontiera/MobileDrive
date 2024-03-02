@@ -23,3 +23,9 @@ https://github.com/mfrontiera/MobileDrive/assets/155067797/f08bc4ae-07be-4a97-9c
 
 
 the "R" button is to change direction of motors (reverse) also remember to check ip and port in app settings 
+
+## License
+plz don't use it in any commercial way :( 
+
+<h3 align="left">Support:</h3>
+<p><a href="https://www.buymeacoffee.com/mfrontiera"> <img align="left" src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="50" width="210" alt="mfrontiera" /></a></p><br><br>
