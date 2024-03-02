@@ -1,0 +1,90 @@
+[gd_scene load_steps=6 format=3 uid="uid://il4q7y6xvn0w"]
+
+[ext_resource type="Script" path="res://Scripts/SettingsScript.gd" id="1_1oxu8"]
+[ext_resource type="FontFile" uid="uid://2lfsmftmkxmh" path="res://Textures/Gui/Fonts/minecraft_font.ttf" id="1_3c7lu"]
+[ext_resource type="Texture2D" uid="uid://bplp752tb7y20" path="res://Textures/Backgrounds/blu.png" id="2_ld8h1"]
+[ext_resource type="Texture2D" uid="uid://oebybvmfa0h3" path="res://Textures/Gui/Misc/ReturnToMainArrow.png" id="4_60isp"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bhj6m"]
+radius = 67.67
+
+[node name="Settings" type="Node2D"]
+script = ExtResource("1_1oxu8")
+
+[node name="Blu" type="Sprite2D" parent="."]
+position = Vector2(705, 348)
+texture = ExtResource("2_ld8h1")
+
+[node name="IdEnter" type="LineEdit" parent="."]
+offset_left = 694.0
+offset_top = 78.0
+offset_right = 810.0
+offset_bottom = 124.0
+theme_override_fonts/font = ExtResource("1_3c7lu")
+placeholder_text = "id"
+alignment = 1
+context_menu_enabled = false
+virtual_keyboard_type = 7
+middle_mouse_paste_enabled = false
+caret_blink = true
+
+[node name="IpEnter" type="LineEdit" parent="."]
+offset_left = 252.0
+offset_top = 78.0
+offset_right = 674.0
+offset_bottom = 124.0
+theme_override_fonts/font = ExtResource("1_3c7lu")
+placeholder_text = "ip adress;port"
+context_menu_enabled = false
+virtual_keyboard_type = 7
+middle_mouse_paste_enabled = false
+caret_blink = true
+
+[node name="ReturnButton" type="TouchScreenButton" parent="."]
+position = Vector2(13, 13)
+scale = Vector2(0.495313, 0.495313)
+texture_normal = ExtResource("4_60isp")
+texture_pressed = ExtResource("4_60isp")
+shape = SubResource("CircleShape2D_bhj6m")
+
+[node name="ShifterSlider" type="HSlider" parent="."]
+offset_left = 400.0
+offset_top = 293.0
+offset_right = 628.0
+offset_bottom = 309.0
+max_value = 5.0
+step = 0.05
+
+[node name="WheelSlider" type="HSlider" parent="."]
+offset_left = 397.0
+offset_top = 193.0
+offset_right = 625.0
+offset_bottom = 209.0
+max_value = 5.0
+step = 0.05
+
+[node name="ShifterLabel" type="Label" parent="."]
+offset_left = 384.0
+offset_top = 247.0
+offset_right = 640.0
+offset_bottom = 270.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_3c7lu")
+text = "Gas pedal comeback speed"
+
+[node name="WheelLabel" type="Label" parent="."]
+offset_left = 401.0
+offset_top = 154.0
+offset_right = 623.0
+offset_bottom = 177.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_3c7lu")
+text = "Wheel comeback speed"
+
+[connection signal="text_submitted" from="IdEnter" to="." method="_on_id_enter_text_submitted"]
+[connection signal="text_submitted" from="IpEnter" to="." method="_on_ip_enter_text_submitted"]
+[connection signal="pressed" from="ReturnButton" to="." method="_on_return_button_pressed"]
+[connection signal="drag_ended" from="ShifterSlider" to="." method="_on_shifter_slider_drag_ended"]
+[connection signal="value_changed" from="ShifterSlider" to="." method="_on_shifter_slider_value_changed"]
+[connection signal="drag_ended" from="WheelSlider" to="." method="_on_wheel_slider_drag_ended"]
+[connection signal="value_changed" from="WheelSlider" to="." method="_on_wheel_slider_value_changed"]

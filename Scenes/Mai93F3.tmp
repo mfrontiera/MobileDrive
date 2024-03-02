@@ -1,0 +1,130 @@
+[gd_scene load_steps=23 format=3 uid="uid://bf8ybx115blh0"]
+
+[ext_resource type="Script" path="res://Scripts/RotationLabel.gd" id="1_7rtvo"]
+[ext_resource type="Script" path="res://Scripts/MainScript.gd" id="1_dtmql"]
+[ext_resource type="Script" path="res://Scripts/WheelTouchButton.gd" id="1_gg4eu"]
+[ext_resource type="Script" path="res://Scripts/SpeedLabel.gd" id="2_86da0"]
+[ext_resource type="Script" path="res://Scripts/WheelTexture.gd" id="2_n101o"]
+[ext_resource type="Texture2D" uid="uid://bplp752tb7y20" path="res://Textures/Backgrounds/blu.png" id="2_tftw5"]
+[ext_resource type="Texture2D" uid="uid://oi13vq8tt3x6" path="res://Textures/Wheels/Kierownica3.png" id="4_a5x1w"]
+[ext_resource type="Script" path="res://Scripts/ShifterTouchButton.gd" id="5_sqhv0"]
+[ext_resource type="Texture2D" uid="uid://dr25xludwmeaq" path="res://Textures/Gui/Speedometer/Speedometer_1.png" id="7_0l68h"]
+[ext_resource type="Texture2D" uid="uid://lfou7f42csro" path="res://Textures/Gui/Speedometer/SpeedometerArrow_1.png" id="8_j6ucu"]
+[ext_resource type="FontFile" uid="uid://cufh6t4tpvos1" path="res://Textures/Gui/Fonts/E1234.ttf" id="8_r3dt8"]
+[ext_resource type="Script" path="res://Scripts/SpeedometerArrow.gd" id="10_g7vvh"]
+[ext_resource type="Texture2D" uid="uid://caoxm6fv7j6n" path="res://Textures/Gui/Gas Pedal/Background.png" id="12_etrju"]
+[ext_resource type="Script" path="res://Scripts/Reverse Button.gd" id="12_xnwn2"]
+[ext_resource type="Texture2D" uid="uid://b23dptewix5w1" path="res://Textures/Gui/Gas Pedal/GasPedal.png" id="14_oqgln"]
+[ext_resource type="Texture2D" uid="uid://d4bs4selb1r5" path="res://Textures/Gui/Gas Pedal/GasPedalPressed.png" id="15_ge057"]
+[ext_resource type="Texture2D" uid="uid://b14g0u2j51v74" path="res://Textures/Gui/Misc/SettingsButton.png" id="17_oayy7"]
+[ext_resource type="Script" path="res://Scripts/UdpHandler.gd" id="17_vinui"]
+[ext_resource type="Script" path="res://Scripts/SettingsEnterScript.gd" id="18_xrnnn"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_l3ckc"]
+radius = 99.67
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jgabw"]
+radius = 96.13
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_c1j3w"]
+radius = 60.0
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_dtmql")
+
+[node name="Blu" type="Sprite2D" parent="."]
+position = Vector2(636, 345)
+scale = Vector2(0.77632, 0.718088)
+texture = ExtResource("2_tftw5")
+
+[node name="RotationLabel" type="Label" parent="."]
+visible = false
+offset_left = 718.0
+offset_top = 208.0
+offset_right = 795.0
+offset_bottom = 245.0
+theme_override_font_sizes/font_size = 30
+script = ExtResource("1_7rtvo")
+
+[node name="WheelTexture" type="Sprite2D" parent="."]
+position = Vector2(889, 396.957)
+scale = Vector2(1.66406, 1.67888)
+texture = ExtResource("4_a5x1w")
+script = ExtResource("2_n101o")
+
+[node name="WheelTouchButton" type="TouchScreenButton" parent="WheelTexture"]
+position = Vector2(0.255798, -0.630554)
+scale = Vector2(1.27232, 1.26108)
+shape = SubResource("CircleShape2D_l3ckc")
+script = ExtResource("1_gg4eu")
+
+[node name="SpeedometerBackground" type="Sprite2D" parent="."]
+position = Vector2(520, 128)
+scale = Vector2(0.456719, 0.456719)
+texture = ExtResource("7_0l68h")
+
+[node name="SpeedLabel" type="Label" parent="SpeedometerBackground"]
+offset_left = -85.0
+offset_top = 68.0
+offset_right = 85.0
+offset_bottom = 134.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.184314, 0.341176, 0.0745098, 1)
+theme_override_fonts/font = ExtResource("8_r3dt8")
+theme_override_font_sizes/font_size = 55
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("2_86da0")
+
+[node name="SpeedometerArrow" type="Sprite2D" parent="SpeedometerBackground"]
+texture = ExtResource("8_j6ucu")
+script = ExtResource("10_g7vvh")
+
+[node name="Reverse Button" type="TouchScreenButton" parent="."]
+position = Vector2(73, 70)
+scale = Vector2(0.49, 0.49)
+shape = SubResource("CircleShape2D_jgabw")
+script = ExtResource("12_xnwn2")
+
+[node name="UnderShifter" type="Sprite2D" parent="."]
+position = Vector2(264, 385)
+scale = Vector2(1.25033, 1.17999)
+texture = ExtResource("12_etrju")
+
+[node name="ShifterTouchButton" type="TouchScreenButton" parent="UnderShifter"]
+position = Vector2(-42.3888, 20.3392)
+scale = Vector2(0.655934, 0.695036)
+texture_normal = ExtResource("14_oqgln")
+texture_pressed = ExtResource("15_ge057")
+script = ExtResource("5_sqhv0")
+
+[node name="SettingsEnterButton" type="TouchScreenButton" parent="."]
+position = Vector2(1051, 14)
+scale = Vector2(0.53125, 0.53125)
+texture_normal = ExtResource("17_oayy7")
+texture_pressed = ExtResource("17_oayy7")
+shape = SubResource("CircleShape2D_c1j3w")
+script = ExtResource("18_xrnnn")
+
+[node name="Node" type="Node" parent="."]
+script = ExtResource("17_vinui")
+
+[node name="ConnectionStatus" type="Sprite2D" parent="Node"]
+position = Vector2(640, 37)
+
+[connection signal="idSignal" from="." to="Node" method="_on_main_id_signal"]
+[connection signal="ipSignal" from="." to="Node" method="_on_main_ip_signal"]
+[connection signal="ssSignal" from="." to="UnderShifter/ShifterTouchButton" method="_on_main_ss_signal"]
+[connection signal="wsSignal" from="." to="WheelTexture" method="_on_main_ws_signal"]
+[connection signal="deegres" from="WheelTexture" to="RotationLabel" method="_on_sprite_2d_deegres"]
+[connection signal="deegres" from="WheelTexture" to="Node" method="_on_wheel_texture_deegres"]
+[connection signal="released" from="WheelTexture/WheelTouchButton" to="WheelTexture" method="_on_wheel_touch_button_released"]
+[connection signal="wheel_touch_event" from="WheelTexture/WheelTouchButton" to="WheelTexture" method="_on_wheel_touch_button_wheel_touch_event"]
+[connection signal="press_state" from="Reverse Button" to="SpeedometerBackground/SpeedLabel" method="_on_reverse_button_press_state"]
+[connection signal="press_state" from="Reverse Button" to="UnderShifter/ShifterTouchButton" method="_on_reverse_button_press_state"]
+[connection signal="press_state" from="Reverse Button" to="Node" method="_on_reverse_button_press_state"]
+[connection signal="pressed" from="Reverse Button" to="Reverse Button" method="_on_pressed"]
+[connection signal="speed_value" from="UnderShifter/ShifterTouchButton" to="SpeedometerBackground/SpeedLabel" method="_on_shifter_touch_button_speed_value"]
+[connection signal="speed_value" from="UnderShifter/ShifterTouchButton" to="SpeedometerBackground/SpeedometerArrow" method="_on_shifter_touch_button_speed_value"]
+[connection signal="speed_value" from="UnderShifter/ShifterTouchButton" to="Node" method="_on_shifter_touch_button_speed_value"]
+[connection signal="pressed" from="SettingsEnterButton" to="SettingsEnterButton" method="_on_pressed"]
