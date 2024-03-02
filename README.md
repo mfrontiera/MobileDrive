@@ -7,7 +7,7 @@ Control your microcontroller based vehicle using WiFi and Android phone
 
 
 ## Microcontroller
-Basically the app sends via udp to your desired ip and port string with "speed" and "rotation" values:
+Basically the app sends via udp to your desired ip and port string with "speed" and "rotation" values (from -256 to 256 and 0 to 180):
 
 ![obraz](https://github.com/mfrontiera/MobileDrive/assets/155067797/8ec1248a-29b1-4e66-9034-d18b90c53684)
 
