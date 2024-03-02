@@ -16,10 +16,10 @@ position = Vector2(705, 348)
 texture = ExtResource("2_ld8h1")
 
 [node name="IdEnter" type="LineEdit" parent="."]
-offset_left = 694.0
-offset_top = 78.0
-offset_right = 810.0
-offset_bottom = 124.0
+offset_left = 815.0
+offset_top = 229.0
+offset_right = 931.0
+offset_bottom = 275.0
 theme_override_fonts/font = ExtResource("1_3c7lu")
 placeholder_text = "id"
 alignment = 1
@@ -29,10 +29,10 @@ middle_mouse_paste_enabled = false
 caret_blink = true
 
 [node name="IpEnter" type="LineEdit" parent="."]
-offset_left = 252.0
-offset_top = 78.0
-offset_right = 674.0
-offset_bottom = 124.0
+offset_left = 373.0
+offset_top = 229.0
+offset_right = 795.0
+offset_bottom = 275.0
 theme_override_fonts/font = ExtResource("1_3c7lu")
 placeholder_text = "ip adress;port"
 context_menu_enabled = false
@@ -48,35 +48,35 @@ texture_pressed = ExtResource("4_60isp")
 shape = SubResource("CircleShape2D_bhj6m")
 
 [node name="ShifterSlider" type="HSlider" parent="."]
-offset_left = 400.0
-offset_top = 293.0
-offset_right = 628.0
-offset_bottom = 309.0
+offset_left = 521.0
+offset_top = 444.0
+offset_right = 749.0
+offset_bottom = 460.0
 max_value = 5.0
 step = 0.05
 
 [node name="WheelSlider" type="HSlider" parent="."]
-offset_left = 397.0
-offset_top = 193.0
-offset_right = 625.0
-offset_bottom = 209.0
+offset_left = 518.0
+offset_top = 344.0
+offset_right = 746.0
+offset_bottom = 360.0
 max_value = 5.0
 step = 0.05
 
 [node name="ShifterLabel" type="Label" parent="."]
-offset_left = 395.0
-offset_top = 248.0
-offset_right = 651.0
-offset_bottom = 271.0
+offset_left = 516.0
+offset_top = 399.0
+offset_right = 772.0
+offset_bottom = 422.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_3c7lu")
 text = "Gas pedal comeback speed"
 
 [node name="WheelLabel" type="Label" parent="."]
-offset_left = 401.0
-offset_top = 157.0
-offset_right = 623.0
-offset_bottom = 180.0
+offset_left = 522.0
+offset_top = 308.0
+offset_right = 744.0
+offset_bottom = 331.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_3c7lu")
 text = "Wheel comeback speed"

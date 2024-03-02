@@ -47,8 +47,8 @@ theme_override_font_sizes/font_size = 30
 script = ExtResource("1_7rtvo")
 
 [node name="WheelTexture" type="Sprite2D" parent="."]
-position = Vector2(993, 421)
-scale = Vector2(1.89844, 1.91534)
+position = Vector2(960, 410)
+scale = Vector2(2.15625, 2.17545)
 texture = ExtResource("4_a5x1w")
 script = ExtResource("2_n101o")
 
@@ -59,8 +59,8 @@ shape = SubResource("CircleShape2D_l3ckc")
 script = ExtResource("1_gg4eu")
 
 [node name="SpeedometerBackground" type="Sprite2D" parent="."]
-position = Vector2(590, 102)
-scale = Vector2(0.331875, 0.331875)
+position = Vector2(535, 115)
+scale = Vector2(0.411875, 0.411875)
 texture = ExtResource("7_0l68h")
 
 [node name="SpeedLabel" type="Label" parent="SpeedometerBackground"]
@@ -81,13 +81,13 @@ texture = ExtResource("8_j6ucu")
 script = ExtResource("10_g7vvh")
 
 [node name="Reverse Button" type="TouchScreenButton" parent="."]
-position = Vector2(86, 145)
+position = Vector2(300, 150)
 scale = Vector2(0.330995, 0.33)
 shape = SubResource("CircleShape2D_jgabw")
 script = ExtResource("12_xnwn2")
 
 [node name="GasBackground" type="Sprite2D" parent="."]
-position = Vector2(332, 389)
+position = Vector2(146, 388)
 scale = Vector2(1.54704, 1.46001)
 texture = ExtResource("12_etrju")
 
@@ -110,7 +110,7 @@ script = ExtResource("18_xrnnn")
 script = ExtResource("17_vinui")
 
 [node name="ConnectionStatus" type="Sprite2D" parent="Node"]
-position = Vector2(769, 39)
+position = Vector2(682, 39)
 
 [connection signal="idSignal" from="." to="Node" method="_on_main_id_signal"]
 [connection signal="ipSignal" from="." to="Node" method="_on_main_ip_signal"]
