@@ -7,7 +7,7 @@ Servo myservo;
 
 char packetBuffer[255];
 const char * ssid = "UDP_TEST";
-unsigned int localPort = 4210;
+unsigned int localPort = 1234;
 
 void receivedPacket(int size);
 void motors(int speed);
