@@ -1,6 +1,11 @@
 # WiFiVehicleControl
 Control your microcontroller based vehicle using WiFi and Android phone
 
+![Icon](https://github.com/mfrontiera/MobileDrive/assets/155067797/d4e4df96-dd5a-418e-a62d-ea0bc568f1bd)
+
+
+
+
 ## Microcontroller
 Basically the app sends via udp to your desired ip and port string with "speed" and "rotation" values:
 
