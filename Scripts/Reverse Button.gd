@@ -4,7 +4,7 @@ signal press_state(pressState)
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	emit_signal("press_state",1)
-	texture_normal = preload("res://Textures/Gui/Misc/reverseButtonPressed.png")
+	texture_normal = preload("res://Textures/Gui/Misc/reverseButton.png")
 	pass # Replace with function body.
 
 

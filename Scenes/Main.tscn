@@ -47,8 +47,8 @@ theme_override_font_sizes/font_size = 30
 script = ExtResource("1_7rtvo")
 
 [node name="WheelTexture" type="Sprite2D" parent="."]
-position = Vector2(889, 396.957)
-scale = Vector2(1.66406, 1.67888)
+position = Vector2(993, 421)
+scale = Vector2(1.89844, 1.91534)
 texture = ExtResource("4_a5x1w")
 script = ExtResource("2_n101o")
 
@@ -59,8 +59,8 @@ shape = SubResource("CircleShape2D_l3ckc")
 script = ExtResource("1_gg4eu")
 
 [node name="SpeedometerBackground" type="Sprite2D" parent="."]
-position = Vector2(520, 128)
-scale = Vector2(0.456719, 0.456719)
+position = Vector2(590, 102)
+scale = Vector2(0.331875, 0.331875)
 texture = ExtResource("7_0l68h")
 
 [node name="SpeedLabel" type="Label" parent="SpeedometerBackground"]
@@ -81,14 +81,14 @@ texture = ExtResource("8_j6ucu")
 script = ExtResource("10_g7vvh")
 
 [node name="Reverse Button" type="TouchScreenButton" parent="."]
-position = Vector2(73, 70)
-scale = Vector2(0.49, 0.49)
+position = Vector2(86, 145)
+scale = Vector2(0.330995, 0.33)
 shape = SubResource("CircleShape2D_jgabw")
 script = ExtResource("12_xnwn2")
 
 [node name="GasBackground" type="Sprite2D" parent="."]
-position = Vector2(264, 385)
-scale = Vector2(1.25033, 1.17999)
+position = Vector2(332, 389)
+scale = Vector2(1.54704, 1.46001)
 texture = ExtResource("12_etrju")
 
 [node name="GasPedal" type="TouchScreenButton" parent="GasBackground"]
@@ -99,7 +99,7 @@ texture_pressed = ExtResource("15_ge057")
 script = ExtResource("5_sqhv0")
 
 [node name="SettingsEnterButton" type="TouchScreenButton" parent="."]
-position = Vector2(1051, 14)
+position = Vector2(1183, 14)
 scale = Vector2(0.53125, 0.53125)
 texture_normal = ExtResource("17_oayy7")
 texture_pressed = ExtResource("17_oayy7")
@@ -110,7 +110,7 @@ script = ExtResource("18_xrnnn")
 script = ExtResource("17_vinui")
 
 [node name="ConnectionStatus" type="Sprite2D" parent="Node"]
-position = Vector2(640, 37)
+position = Vector2(769, 39)
 
 [connection signal="idSignal" from="." to="Node" method="_on_main_id_signal"]
 [connection signal="ipSignal" from="." to="Node" method="_on_main_ip_signal"]
